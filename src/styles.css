@@ -1,0 +1,46 @@
+.Logo {
+  height: auto;
+  width: 100%;
+}
+
+.Search-Icon {
+  top: 40%;
+}
+
+.Search-Form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+i {
+  font-size: 1.4em;
+}
+
+
+html {
+  background-color: #F5F5F5A6;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+#Search-Section {
+  display: flex;
+  position: relative;
+}
+
+.Search-Bar {
+  
+  width: 65vw;
+  height: 10vh;
+  font-size: 1.4em;
+  margin: 20px 60px;
+  
+  outline: none;
+  text-indent: 15px;
+
+  /** Border **/
+  border-radius: 20px;
+  border: 1px;
+  border-color: rgb(144, 144, 144);
+  border-style: solid;
+}
