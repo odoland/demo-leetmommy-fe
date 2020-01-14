@@ -1,6 +1,7 @@
 import axios from 'axios';
 
-const URL = 'https://leetmommy2.herokuapp.com';
+// const URL = 'https://leetmommy2.herokuapp.com';
+const URL = 'http://127.0.0.1:5000';
 
 export interface Ping {
   ping: boolean;
@@ -10,6 +11,15 @@ export interface Doc {
   url: string,
   title: string,
   headers: string[],
+  highlight: Highlight,
+}
+
+export interface Highlight {
+  headers: string[],
+  title: string[],
+  code: string[],
+  bullets: string[],
+  text: string[],
 }
 
 class LeetMommyAPI {

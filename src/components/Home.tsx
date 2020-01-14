@@ -12,6 +12,7 @@ import Autocomplete from 'react-autocomplete';
 import { Tooltip } from '@material-ui/core';
 import HelpIcon from '@material-ui/icons/Help';
 import SearchIcon from '@material-ui/icons/Search';
+import { normalize } from 'path';
 
 const COHORTS = ['r11', 'r12', 'r13', 'r14'];
 
@@ -74,7 +75,7 @@ const Home: React.FC<{}> = (props) => {
             />
           </section>
 
-          <button style={{ display: "none" }} type="submit"> <SearchIcon/></button>
+          <button style={{ display: "none" }} type="submit"> <SearchIcon /></button>
         </form>
 
         {renderResults(results, searched)}
@@ -92,6 +93,7 @@ const renderResults = (results: Doc[], hasSearched: boolean) => {
   if (!hasSearched) {
     return null;
   } else {
+
     return (
       <React.Fragment>
         <p>
@@ -103,6 +105,26 @@ const renderResults = (results: Doc[], hasSearched: boolean) => {
               <strong>
                 <span> {doc.title} </span>
                 <a target="_blank" rel="noopener noreferrer" href={doc.url}> {doc.url} </a>
+                <p style={{
+                  fontWeight: 'normal',
+                }}>
+                  {doc.highlight.headers && <span dangerouslySetInnerHTML={{ __html: doc.highlight.headers.join(', ') }} />}
+                </p>
+                <p style={{
+                  fontWeight: 'normal',
+                }}>
+                  {doc.highlight.text && <span dangerouslySetInnerHTML={{ __html: doc.highlight.text.join(', ') }} />}
+                </p>
+                <p style={{
+                  fontWeight: 'normal',
+                }}>
+                  {doc.highlight.bullets && <span dangerouslySetInnerHTML={{ __html: doc.highlight.bullets.join(', ') }} />}
+                </p>
+                <p style={{
+                  fontWeight: 'normal',
+                }}>
+                  {doc.highlight.code && <pre dangerouslySetInnerHTML={{ __html: doc.highlight.code.join(' ... ') }} />}
+                </p>
               </strong>
             </ListItem>
           ))

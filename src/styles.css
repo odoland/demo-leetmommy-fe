@@ -17,6 +17,11 @@ i {
   font-size: 1.4em;
 }
 
+p b { /** highlighted text **/
+  color: lightseagreen;
+  font-weight: bold;
+}
+
 
 html {
   background-color: #F5F5F5A6;
