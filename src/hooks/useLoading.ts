@@ -10,10 +10,8 @@ const useLoading = () => {
   useEffect(() => {
 
     const wakeUp = async () => {
-      const { ping } = await LeetMommyAPI.ping();
-      if (ping) {
-        setLoading(ping);
-      };
+      await LeetMommyAPI.ping();
+      setLoading(false);
     }
     wakeUp();
 

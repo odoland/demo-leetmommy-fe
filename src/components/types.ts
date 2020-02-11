@@ -1,0 +1,1 @@
+export type StylesObject = Record<string, React.CSSProperties>;

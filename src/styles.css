@@ -1,3 +1,11 @@
+.Home-Page {
+  height: 80vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .Logo {
   height: auto;
   width: 100%;
@@ -30,22 +38,76 @@ html {
 
 #Search-Section {
   display: flex;
-  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+
+.Center-Container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Center-Col-Container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .Search-Bar {
   
   width: 65vw;
-  height: 10vh;
+  height: 5vh;
   font-size: 1.4em;
-  margin: 20px 60px;
   
   outline: none;
   text-indent: 15px;
 
   /** Border **/
-  border-radius: 20px;
+  border-radius: 10px;
   border: 1px;
   border-color: rgb(144, 144, 144);
   border-style: solid;
 }
+
+.Search-Button {
+  margin: 10px;
+  border-radius: 5px;
+  border-color: #FFFFFF;
+  background-color: rgb(224, 224, 224);
+  width: 100px;
+}
+
+.Search-Page {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.Result-Card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+ }
+
+ .Result-Card * {
+   width: 100%;
+ }
+
+ .Card-Title {
+   font-size: 2em;
+   color: rgb(36, 120, 250);
+ }
+ 
+ .Card-URL {
+   font-weight: bold;
+   color: rgb(136, 155, 190);
+ }
+
+ .Result-Count {
+   width: 100%;
+   font-size: 2em;
+   display: flex;
+   justify-content: center;
+ }
